@@ -24,3 +24,12 @@ def test_search_():
     assert 'dict' == res.__class__.__name__
     assert 6 == len(res)
     assert 2683264 == res['results'][0]['taxonKey']
+
+def test_search_occurrenceID():
+    "occurrences.search - diff occurrenceID"
+    uuid = "a55e740b-55af-4029-9481-74e0e5049581"
+    res = occurrences.search(occurrenceID = uuid)
+    assert 'dict' == res.__class__.__name__
+    assert 6 == len(res)
+    assert uuid == res['results'][0]['occurrenceID']
+

@@ -8,6 +8,7 @@ def search(taxonKey=None, scientificName=None, country=None,
     decimalLatitude=None, decimalLongitude=None, elevation=None,
     depth=None, institutionCode=None, collectionCode=None,
     hasGeospatialIssue=None, issue=None, q=None, mediatype=None,
+    occurrenceID=None,
     limit=300, offset=0, **kwargs):
     '''
     Search GBIF occurrences
@@ -246,6 +247,7 @@ def search(taxonKey=None, scientificName=None, country=None,
         'decimalLatitude': decimalLatitude, 'decimalLongitude': decimalLongitude,
         'elevation': elevation, 'depth': depth, 'institutionCode': institutionCode,
         'collectionCode': collectionCode, 'hasGeospatialIssue': hasGeospatialIssue,
+        'occurrenceID': occurrenceID,
         'issue': issue, 'q': q, 'mediatype': mediatype, 'limit': limit,
         'offset': offset}, **kwargs)
     return out
